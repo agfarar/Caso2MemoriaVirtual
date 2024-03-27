@@ -1,2 +1,2 @@
-#Integrantes
+## Integrantes
 Ángel Farfán Arcila
