@@ -39,7 +39,7 @@ public class Process {
             // Generate reference columns by pageIndex
             for (int i = 0; i < rows; i++) {
                 for (int j = 0; j < columns; j++) {
-                    int pageIndex = (i * columns + j) * 4 / pageSize; // Calculate page index
+                    int pageIndex = (i * columns + j) * 4 / pageSize;
                     bufferedWriter.write(pageIndex + "\n");
                 }
             }
