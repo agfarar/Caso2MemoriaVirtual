@@ -1,10 +1,9 @@
-package process;
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Process {
     private int[][] matrix1;
@@ -12,12 +11,16 @@ public class Process {
     private int columns;
     private int pageSize;
 
+    static int counter = 0;
+
     public Process(int[][] matrix1, int rows, int columns, int pageSize) {
         this.matrix1 = matrix1;
         this.rows = rows;
         this.columns = columns;
         this.pageSize = pageSize;
+        generateReferenceColumnsToFile(counter+"references.txt");
     }
+
 
     public void generateReferenceColumnsToFile(String fileName) {
         try {
@@ -68,11 +71,7 @@ public class Process {
     // Method for applying filter to matrix
     private int[][] applyFilter(int[][] mat1, int nf, int nc) {
         int[][] mat3 = new int[nf][nc];
-        int[][] mat2 = {
-                {1, 1, 1},
-                {1, 1, 1},
-                {1, 1, 1}
-        };
+        int[][] mat2 = {{1, 1, 1}, {1, 1, 1}, {1, 1, 1}};
 
         for (int i = 0; i < nf - 1; i++) {
             for (int j = 0; j < nc - 1; j++) {
