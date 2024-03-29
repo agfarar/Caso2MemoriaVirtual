@@ -1,46 +1,5 @@
 package paging;
 
-    /*
-    public void example(){
-        for (int i = 0; i < nf-1; i++) {
-            for (int j = 0; j < nc-1; j++) {
-                //Recorrer los vecinos y aplicar el filtro
-                //mat1 : matriz de datos
-                //mat2 : matriz con el filtro (usaremos un filtro de 3x3 para resaltar bordes)
-                //mat3 : matriz resultante
-
-                int acum = 0;
-                for (int a = -1; a <=1 ; a++) {
-                    for (int b = -1; b <=1 ; b++) {
-                        int i2 = i+a;
-                        int j2 = j+b;
-                        int i3 = 1+a;
-                        int j3 = 1+b;
-
-                        acum += (mat2[i3][j3]*mat1[i2][j2]);
-                    }
-                }
-                if (acum >= 0 && acum <= 255) mat3[i][j] = acum;
-                else if (acum<0) mat3[i][j] = 0;
-                else mat3[i][j] = 255;
-
-                // se asigna un valor predefinido a los bordes
-
-                for(int i=0; i < nc ; i++){
-                    mat3[0][i] = 0;
-                    mat3[nf-1][i] = 255;
-                }
-                for (int i = 1; i < nf-1; i++){
-                    mat3[i][0] = 0;
-                    mat3[i][nc-1] = 255;
-                }
-            }
-
-        }
-    }
-
-     */
-
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -91,3 +50,46 @@ public class PagingSystem {
     }
 }
 
+
+
+
+    /*
+    public void example(){
+        for (int i = 0; i < nf-1; i++) {
+            for (int j = 0; j < nc-1; j++) {
+                //Recorrer los vecinos y aplicar el filtro
+                //mat1 : matriz de datos
+                //mat2 : matriz con el filtro (usaremos un filtro de 3x3 para resaltar bordes)
+                //mat3 : matriz resultante
+
+                int acum = 0;
+                for (int a = -1; a <=1 ; a++) {
+                    for (int b = -1; b <=1 ; b++) {
+                        int i2 = i+a;
+                        int j2 = j+b;
+                        int i3 = 1+a;
+                        int j3 = 1+b;
+
+                        acum += (mat2[i3][j3]*mat1[i2][j2]);
+                    }
+                }
+                if (acum >= 0 && acum <= 255) mat3[i][j] = acum;
+                else if (acum<0) mat3[i][j] = 0;
+                else mat3[i][j] = 255;
+
+                // se asigna un valor predefinido a los bordes
+
+                for(int i=0; i < nc ; i++){
+                    mat3[0][i] = 0;
+                    mat3[nf-1][i] = 255;
+                }
+                for (int i = 1; i < nf-1; i++){
+                    mat3[i][0] = 0;
+                    mat3[i][nc-1] = 255;
+                }
+            }
+
+        }
+    }
+
+     */

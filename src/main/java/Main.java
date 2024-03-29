@@ -64,7 +64,7 @@ public class Main {
 
             else if (option == 2) {
 
-                System.out.println("Not yet to be implemented");
+                System.out.println("");
 
             }
         }
